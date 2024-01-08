@@ -3,7 +3,3 @@ kind: Kustomization
 
 resource:
   - ../../base/v1
-
-images:
-  - name: nginx
-    newTag: latest
