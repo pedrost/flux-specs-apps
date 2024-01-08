@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carts-api
+  namespace: carts
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: carts-api
+  template:
+    metadata:
+      labels:
+        app: carts-api
+    spec:
+      containers:
+      - name: carts-api
+        image: nginx:latest
+        ports:
+        - containerPort: 80
